@@ -7,8 +7,9 @@ services:
     environment:
       - TZ=Asia/Shanghai
     ports:
-      - "127.0.0.1:8002:8000"
+      - "8000:8000"
     restart: unless-stopped
+    # 下面是使用 GPU 的，如果使用 CPU 请删去
     deploy:
       resources:
         reservations:
